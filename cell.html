@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>관리자</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    
+    <!-- 관리자페이지 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+
+</head>
+<body class="sidebar-mini ">
+  <div class="wrapper">
+     <!-- Sidebar -->
+     <div class="navbar-minimize-fixed">
+        <button class="minimize-sidebar btn btn-link btn-just-icon">
+          <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+          <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+        </button>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-wrapper">
+          <ul class="gnb">
+            <li class="">
+              <a href="./main_client.html" class="ic_survey">
+              	<span></span>
+                <p>평가하기</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./main_mgmt.html" class="ic_manager">
+              	<span></span>
+                <p>관리자</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+            <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown"><!-- 알림이 있을 경우 active 클래스 추가 -->
+                  <div class="icon_notice"></div> 
+                  <p class="d-lg-none">Notice</p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo"><!-- 사진 등록된 사용자 class active 추가-->
+                  	<span>혜란</span>
+                    <img src="./img/tania.jpg" alt="Table image">
+                  </div>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      
+      <div class="content">
+        <!-- Your content here -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header pt-sm">
+                <h3 class="card-title">
+                  프로젝트명 : 다면평가 시스템 
+                  <button class="btn btn-primary float-right">
+                    실험 생성하기 <i class="tim-icons icon-simple-add"></i> 
+                  </button>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="">
+                  <ul class="nav nav-pills nav-pills-primary">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#link1">
+                        전체보기<em>(3)</em>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link2">
+                        진행중인 실험<em>(1)</em>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link3">
+                        완료된 실험<em>(2)</em>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-space">
+                    <!-- 전체보기 -->
+                    <div class="tab-pane active" id="link1">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:100px">
+                          <col style="width:120px">
+                          <col style="width:auto">
+                          <col style="width:150px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>실험 단계</th>
+                            <th>생성일</th>
+                            <th>실험 참여 인원</th>
+                            <th>평가 진행 관리</th>
+                            <th>실험 평가 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><!-- 평가 진행 전 -->
+                            <td>#5</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo">
+                                <span>은엽</span>
+                              </div>
+                              <div class="photo">
+                                <span>상현</span>
+                              </div>
+                              <div class="photo">
+                                <span>혜란</span>
+                              </div>
+                              <div class="photo">
+                                <span>승현</span>
+                              </div>
+                              <div class="photo">
+                                <span>만호</span>
+                              </div>
+                              <div class="over">+2</div><!-- 5명 초과일 경우 노출 -->
+                            </td>
+                            <td>
+                              <button class="btn btn-secondary btn-sm" data-toggle="modal" data-target=".distribution-modal">평가 배포하기</button>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                          <tr><!-- 평가 진행 중 -->
+                            <td>#4</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo end"><!-- 평가 완료한 사람 end -->
+                                <span>정두</span>
+                              </div>
+                              <div class="photo">
+                                <span>은엽</span>
+                              </div>
+                            </td>
+                            <td>
+                              <i class="tim-icons icon-check-2 mr-2"></i> 1/2
+                            </td>
+                            <td>
+                              <button class="btn btn-sm">평가 중지</button>
+                            </td>
+                          </tr>
+                          <tr class="state-end"><!-- 평가 완료 --><!-- 완료된 리스트에 경우 state-end 추가 -->
+                            <td>#3</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo">
+                                <span>혜란</span>
+                              </div>
+                              <div class="photo">
+                                <span>승현</span>
+                              </div>
+                              <div class="photo">
+                                <span>만호</span>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-sm disabled">결과 발송</button>  
+                            </td>
+                            <td>
+                              <button class="btn btn-secondary btn-sm">평가 확인</button>
+                            </td>
+                          </tr>
+                          <tr class="state-end"><!-- 평가 완료 --><!-- 완료된 리스트에 경우 state-end 추가 -->
+                            <td>#2</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo">
+                                <span>혜란</span>
+                              </div>
+                              <div class="photo">
+                                <span>승현</span>
+                              </div>
+                              <div class="photo">
+                                <span>만호</span>
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-secondary btn-sm">결과 발송</button> 
+                            </td>
+                            <td>
+                              <button class="btn btn-sm" data-toggle="modal" data-target=".check-modal">평가 검수</button>
+                            </td>
+                          </tr> 
+                          <tr class="state-end"><!-- 평가 완료 --><!-- 완료된 리스트에 경우 state-end 추가 -->
+                            <td>#1</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo">
+                                <span>혜란</span>
+                              </div>
+                              <div class="photo">
+                                <span>승현</span>
+                              </div>
+                              <div class="photo">
+                                <span>만호</span>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="c">평가 종료</span>  
+                            </td>
+                            <td>
+                              <button class="btn btn-sm" data-toggle="modal" data-target=".view-modal">보기</button> 
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //전체보기 -->
+                    <!-- 진행중인 실험 -->
+                    <div class="tab-pane" id="link2">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:auto">
+                          <col style="width:120px">
+                          <col style="width:300px">
+                          <col style="width:150px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>실험명</th>
+                            <th>생성일</th>
+                            <th>실험 참여 인원</th>
+                            <th>실험 평가 관리</th>
+                            <th>실험 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><!-- 평가 진행 중 -->
+                            <td>실험명이 노출 되는 영역입니다.</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo end"><!-- 실험완료 end -->
+                                <span>정두</span>
+                              </div>
+                              <div class="photo">
+                                <span>은엽</span>
+                              </div>
+                            </td>
+                            <td>
+                              <i class="tim-icons icon-check-2 mr-2"></i> 1/2
+                            </td>
+                            <td>
+                              <button class="btn btn-sm">평가 중지</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //진행중인 실험 -->
+                    <!-- 완료된 실험 -->
+                    <div class="tab-pane" id="link3">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:auto">
+                          <col style="width:120px">
+                          <col style="width:300px">
+                          <col style="width:150px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>실험명</th>
+                            <th>생성일</th>
+                            <th>실험 참여 인원</th>
+                            <th>실험 평가 관리</th>
+                            <th>실험 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="state-end"><!-- 평가 완료 --><!-- 완료된 리스트에 경우 state-end 추가 -->
+                            <td>실험명이 노출 되는 영역입니다.</td>
+                            <td>YY.MM.DD</td>
+                            <td>
+                              <div class="photo"><!-- 사진 등록되지 않은 사용자 -->
+                                <span>혜란</span>
+                              </div>
+                              <div class="photo"><!-- 사진 등록되지 않은 사용자 -->
+                                <span>승현</span>
+                              </div>
+                              <div class="photo"><!-- 사진 등록되지 않은 사용자 -->
+                                <span>만호</span>
+                              </div>
+                            </td>
+                            <td>
+                              <span class="c">실험 평가 완료</span>  
+                            </td>
+                            <td class="text-right">
+                              <!-- 노출되는 버튼 없음 -->
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //완료된 실험 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- e. content -->
+      
+      <!-- 평가 배포 distribution-modal -->
+      <div class="modal fade distribution-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header justify-content-center">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+              <h6 class="title title-up">실험평가 배포</h6>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <p class="tit col-md-3">실험명</p>
+                <p class="txt col-md-9">실험명이 노출되는 영역</p>
+              </div>
+              <div class="row">
+                <p class="tit col-md-3">평가 기한</p>
+                <p class="txt col-md-9">2021년 8월5일 ~ 2021년 8월10일</p>
+              </div>
+              <div class="row">
+                <p class="tit col-md-3">PL</p>
+                <p class="txt col-md-9">김라플 | 디지털마케팅팀</p>
+              </div>
+              <div class="row">
+                <p class="tit col-md-3">PA</p>
+                <p class="txt col-md-9">안상현 | DX파트<br>조혜란 | DX파트<br>이승현 | DX파트<br>성은엽 | DX파트<br>한만호 | PMO팀</p>
+              </div>
+              <div class="row">
+                <p class="tit col-md-3">지원담당</p>
+                <p class="txt col-md-9">김정두 | DT전략팀</p>
+              </div> 
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary m-2">배포하기</button>
+              <button type="button" class="btn btn-info btn-simple m-2" data-dismiss="modal">취소</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 평가 보기 view-modal -->
+      <div class="modal fade view-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+                <h6 class="title title-up">프로젝트 명 / <span>#1</span> 평가 상세보기</h6>
+              </div>
+              <div class="modal-body">
+              	<h4>
+              		프로젝트 점수 
+              		<button class="btn btn-sm btn-primary float-right">
+                    	엑셀 다운로드 <i class="tim-icons icon-cloud-download-93"></i> 
+                  	</button>
+                </h4>
+                <div class="project_score">
+                	<div class="row m-0 division">
+	                	<div class="col-md-2">구분</div>
+	                	<div class="col-md-3">이름</div>
+	                	<div class="col-md-2">기본점수</div>
+	                	<div class="col-md-2">평가점수</div>
+	                	<div class="col-md-2">함계점수</div>
+	                </div>
+	                <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading_0">
+	                			<a data-toggle="collapse" data-parent="#accordion" href="#collapse_0" aria-expanded="false" aria-controls="collapse_0" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">PL</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-2">30.0</div>
+					                	<div class="col-md-2">10.0</div>
+					                	<div class="col-md-2">40.0</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse_0" class="collapse" role="tabpanel" aria-labelledby="heading_0">
+	                			<div class="card-body">
+	                				<h5><span>김라플</span>님이 받은 점수</h5>
+	                				<table id="" class="table table-striped table-score">
+				                        <thead>
+				                          <tr>
+				                            <th>구분</th>
+				                            <th>평가자</th>
+				                            <th>질문1</th>
+				                            <th>질문2</th>
+				                            <th>질문3</th>
+				                            <th>질문4</th>
+				                            <th>질문5</th>
+				                            <th>질문6</th>
+				                            <th>질문7</th>
+				                            <th>질문8</th>
+				                            <th>질문9</th>
+				                          </tr>
+				                        </thead>
+				                        <tbody>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀지원담당</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                        </tbody>
+				                      </table>
+				                      <div class="total-score">
+					                      <div class="row">
+					                      	<div class="col-md-10">평균 점수(팀원 점수 30% + 지원 담당 점수 70% 적용)</div>
+					                      	<div class="col-md-2 text-info text-right font-weight-700">8.5</div>
+					                      </div>
+					                      <div class="row">
+					                      	<div class="col-md-10">환산 점수(20점 만점)</div>
+					                      	<div class="col-md-2 text-info text-right font-weight-700">17.5</div>
+					                      </div>
+				                      </div>
+				                      <div class="feedback">
+					                      <h5><span>김라플</span>님이 받은 피드백</h5>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>From. 홍길동 | 팀원</span>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>From. 홍길동 | 팀원</span>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>From. 홍길동 | 지원담당</span>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+				                      </div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading_1">
+	                			<a data-toggle="collapse" data-parent="#accordion" href="#collapse_1" aria-expanded="false" aria-controls="collapse_1" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-2">30.0</div>
+					                	<div class="col-md-2">10.0</div>
+					                	<div class="col-md-2">40.0</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse_1" class="collapse" role="tabpanel" aria-labelledby="heading_1">
+	                			<div class="card-body">content2</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading_2">
+	                			<a data-toggle="collapse" data-parent="#accordion" href="#collapse_2" aria-expanded="false" aria-controls="collapse_2" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-2">30.0</div>
+					                	<div class="col-md-2">10.0</div>
+					                	<div class="col-md-2">40.0</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse_2" class="collapse" role="tabpanel" aria-labelledby="heading_2">
+	                			<div class="card-body">content3</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading_3">
+	                			<a data-toggle="collapse" data-parent="#accordion" href="#collapse_3" aria-expanded="false" aria-controls="collapse_3" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-2">30.0</div>
+					                	<div class="col-md-2">10.0</div>
+					                	<div class="col-md-2">40.0</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse_3" class="collapse" role="tabpanel" aria-labelledby="heading_3">
+	                			<div class="card-body">content4</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading_4">
+	                			<a data-toggle="collapse" data-parent="#accordion" href="#collapse_4" aria-expanded="false" aria-controls="collapse_4" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">지원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-2">30.0</div>
+					                	<div class="col-md-2">10.0</div>
+					                	<div class="col-md-2">40.0</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse_4" class="collapse" role="tabpanel" aria-labelledby="heading_4">
+	                			<div class="card-body">content4</div>
+	                		</div>
+	                	</div>
+	                </div>
+                </div>
+              </div>
+              <div class="modal-footer m-auto">
+                  <button class="btn btn-secondary" data-dismiss="modal">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //평가 보기 view-modal -->
+        
+        <!-- 평가 검수 check-modal -->
+      <div class="modal fade check-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+                <h6 class="title title-up">프로젝트 명 / <span>#1</span> 평가 검수</h6>
+              </div>
+              <div class="modal-body">
+              	<h4>
+              		프로젝트 점수 
+                </h4>
+                <div class="project_score">
+                	<div class="row m-0 division">
+	                	<div class="col-md-2">구분</div>
+	                	<div class="col-md-3">이름</div>
+	                	<div class="col-md-4"></div>
+	                	<div class="col-md-2">상태</div>
+	                </div>
+	                <div id="accordion1" role="tablist" aria-multiselectable="true" class="card-collapse">
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading1_0">
+	                			<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1_0" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">PL</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-4"></div>
+					                	<div class="col-md-2"><button class="btn btn-sm">반려</button></div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse1_0" class="collapse" role="tabpanel" aria-labelledby="heading1_0">
+	                			<div class="card-body">
+	                				<h5><span>김라플</span>님이 평가한 점수</h5>
+	                				<table id="" class="table table-striped table-score">
+				                        <thead>
+				                          <tr>
+				                            <th>구분</th>
+				                            <th>평가자</th>
+				                            <th>질문1</th>
+				                            <th>질문2</th>
+				                            <th>질문3</th>
+				                            <th>질문4</th>
+				                            <th>질문5</th>
+				                            <th>질문6</th>
+				                            <th>질문7</th>
+				                            <th>질문8</th>
+				                            <th>질문9</th>
+				                          </tr>
+				                        </thead>
+				                        <tbody>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀원</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                          <tr class="state-end">
+				                            <td>팀지원담당</td>
+				                            <td>이지금</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                            <td>9</td>
+				                          </tr>
+				                        </tbody>
+				                      </table>
+				                      <div class="feedback">
+					                      <h5><span>김라플</span>님이 평가한 피드백</h5>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>To. 홍길동 | 팀원</span>
+					                      			<div class="check-area float-right">
+					                      				<input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="">
+					                      				<span class="align-top ml-1">감추기</span>
+					                      			</div>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>To. 홍길동 | 팀원</span>
+					                      			<div class="check-area float-right">
+					                      				<input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="">
+					                      				<span class="align-top ml-1">감추기</span>
+					                      			</div>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>To. 홍길동 | 팀원</span>
+					                      			<div class="check-area float-right">
+					                      				<input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="">
+					                      				<span class="align-top ml-1">감추기</span>
+					                      			</div>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+					                      <div class="feedback-item">
+					                      	<div class="card">
+					                      		<div class="card-header">
+					                      			<span>To. 홍길동 | 지원담당</span>
+					                      			<div class="check-area float-right">
+					                      				<input type="checkbox" name="checkbox" class="bootstrap-switch" data-on-label="" data-off-label="">
+					                      				<span class="align-top ml-1">감추기</span>
+					                      			</div>
+					                      		</div>
+					                      		<div class="card-body">
+					                      			<div class="read">
+					                      				홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.<br>홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.홍길동님이 김라플님에게 남긴 피드백 내용이 보여집니다.
+					                      			</div>
+					                      		</div>
+					                      	</div>
+					                      </div>
+				                      </div>
+	                			</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading1_1">
+	                			<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_1" aria-expanded="false" aria-controls="collapse1_1" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-4"></div>
+					                	<div class="col-md-2">반려 완료</div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse1_1" class="collapse" role="tabpanel" aria-labelledby="heading1_1">
+	                			<div class="card-body">content2</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading1_2">
+	                			<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_2" aria-expanded="false" aria-controls="collapse1_2" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-4"></div>
+					                	<div class="col-md-2"><button class="btn btn-sm">반려</button></div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse1_2" class="collapse" role="tabpanel" aria-labelledby="heading1_2">
+	                			<div class="card-body">content3</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading1_3">
+	                			<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_3" aria-expanded="false" aria-controls="collapse1_3" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">팀원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-4"></div>
+					                	<div class="col-md-2"><button class="btn btn-sm">반려</button></div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse1_3" class="collapse" role="tabpanel" aria-labelledby="heading1_3">
+	                			<div class="card-body">content4</div>
+	                		</div>
+	                	</div>
+	                	<div class="card card-plain">
+	                		<div class="card-header" id="heading1_4">
+	                			<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_4" aria-expanded="false" aria-controls="collapse1_4" class="collapsed">
+	                				<div class="row">
+	                					<div class="col-md-2">지원</div>
+					                	<div class="col-md-3">김라플</div>
+					                	<div class="col-md-4"></div>
+					                	<div class="col-md-2"><button class="btn btn-sm">반려</button></div>
+	                				</div> 
+	                				<i class="tim-icons icon-minimal-down"></i>
+	                			</a> 
+	                		</div>
+	                		<div id="collapse1_4" class="collapse" role="tabpanel" aria-labelledby="heading1_4">
+	                			<div class="card-body">content4</div>
+	                		</div>
+	                	</div>
+	                </div>
+                </div>
+              </div>
+              <div class="modal-footer m-auto">
+                  <button class="btn btn-secondary" data-dismiss="modal">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //평가 검수 check-modal -->
+      
+  
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div><!-- e .main-panel -->
+</div><!-- e .wrapper -->
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 관리자페이지 공통 스크립트 -->
+<script src="./js/mgmt.js"></script>
+
+</body>
+</html>
+
+<!-- 해당페이지 커스톰 js -->
+<script>
+  $(function() {
+    var table = $('#celltable').DataTable();
+    var table_ing = $('#celltable-ing').DataTable();
+    var table_end = $('#celltable-end').DataTable();
+    
+    $("input.bootstrap-switch").on("switchChange.bootstrapSwitch", function(){
+       	if($(this).is(':checked')){
+       		$(this).closest(".feedback-item").addClass("hidden");
+       	}else{
+       		$(this).closest(".feedback-item").removeClass("hidden");
+       	}  
+     });
+  });
+
+  var alert_distribution = function(){
+    Swal.fire({
+      title: '"실험명이 노출되는 영역"의<br>평가가 성공적으로 배포되었습니다.',
+      confirmButtonText: `확인`
+    });
+  }
+  var alert_reset = function(){
+    Swal.fire({
+      title: '평가가 초기화 됩니다.<br>평가 진행을 위해서는 재 배포하셔야 합니다.',
+      showCancelButton: true,
+      confirmButtonText: `확인`,
+      cancelButtonText: `취소`
+    });
+   }
+   var alert_send = function(){
+       Swal.fire({
+         title: '프로젝트 인원에게 실험결과를 발송합니다.<br>실험 결과는 발송 후 회수할 수 없습니다.',
+         showCancelButton: true,
+         confirmButtonText: `확인`,
+         cancelButtonText: `취소`
+       });
+     }
+</script>

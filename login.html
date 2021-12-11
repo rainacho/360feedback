@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>로그인</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    
+    <!-- 사용자페이지 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+</head>
+<body class="login-page">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+    <div class="container-fluid">
+      <div class="navbar-wrapper">
+        <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+        <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <button class="btn btn-sm btn-simple">Log out</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  
+  <div class="wrapper wrapper-full-page">
+    <div class="full-page login-page">
+      <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+      <div class="content">
+        <div class="container">
+          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+            <form class="form">
+              <div class="card card-login">
+                <div class="card-body">
+                  <p>교보라이프플래닛 다면평가</p>  
+                  <h3>로그인</h3>
+                  <div class="form-group has-success"><!-- 에러시 .has-danger -->
+	                  <div class="input-group mb-0 mt-5">
+	                    <div class="input-group-prepend">
+	                      <div class="input-group-text">
+	                        <i class="tim-icons icon-single-02"></i>
+	                      </div>
+	                    </div>
+	                    <input type="text" class="form-control form-control-success" placeholder="사원번호" value="123456">
+	                  </div>  
+                  </div>
+                  <div class="form-group">
+	                  <div class="input-group">
+	                    <div class="input-group-prepend">
+	                      <div class="input-group-text">
+	                        <i class="tim-icons icon-lock-circle"></i>
+	                      </div>
+	                    </div>
+	                    <input type="text" placeholder="비밀번호" class="form-control" value="">
+	                  </div>
+	               </div>   
+                </div>
+                <div class="card-footer">
+                  <a href="javascript:void(0)" class="btn btn-secondary btn-lg btn-block mb-3" data-toggle="modal" data-target=".login-modal-1">로그인 하기</a>
+                  <div class="pull-right">
+                    <h6>
+                      <a href="javascript:alert_help()" class="link footer-link text-white">로그인이 안되시나요?</a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- s. 최초 유입시 비밀번호 재설정 modal data-target::login-modal-1 -->
+        <div class="modal fade login-modal-1" tabindex="-1" role="dialog" aria-labelledby="" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+		                  <i class="tim-icons icon-simple-remove"></i>
+		                </button>          
+                        <h6 class="title title-up">비밀번호를 변경해주세요.</p>
+                    </div>
+                    <div class="modal-body">
+                        <p>비밀번호는 6~12자리에 영문, 숫자, 특수 기호로 설정이 가능 합니다.</p>
+                        <div class="form-group">
+	                        <div class="input-group">
+	                            <div class="input-group-prepend">
+	                              <div class="input-group-text">
+	                                <i class="tim-icons icon-lock-circle"></i>
+	                              </div>
+	                            </div>
+	                            <input type="text" class="form-control" placeholder="현재 비밀번호" value="">
+	                        </div>
+                        </div>
+                        <div class="form-group has-success">
+	                        <div class="input-group">
+	                            <div class="input-group-prepend">
+	                              <div class="input-group-text">
+	                                <i class="tim-icons icon-lock-circle"></i>
+	                              </div>
+	                            </div>
+	                            <input type="text" class="form-control" placeholder="새 비밀번호(4자이상)">
+	                        </div>
+                        </div>
+                        <div class="form-group has-success">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <div class="input-group-text">
+                                    <i class="tim-icons icon-lock-circle"></i>
+                                  </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="새 비밀번호 확인">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <a href="javascript:void(0)" class="btn btn-secondary m-2" data-toggle="modal" data-target=".login-modal-1">변경할게요</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e. 최초 유입시 비밀번호 재설정 -->
+        
+        <!-- s. 로그인 문제 안내창  modal data-target::login-modal-2 -->
+        <div class="modal modal-black fade login-modal-2" tabindex="-1" role="dialog" aria-labelledby="" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                          <i class="tim-icons icon-simple-remove"></i>
+                        </button>
+                        <p>로그인이 안되시거나<br />비밀번호 재설정이 필요하신 분은<br />DT전략팀에 문의해주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e. 로그인 문제 안내창  modal -->
+        
+      </div><!-- e.content -->
+  
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div>
+</div><!-- e .wrapper -->
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 사용자페이지 공통 스크립트 -->
+<script src="./js/client.js"></script>
+
+</body>
+</html>
+
+<!-- 해당페이지 커스톰 js -->
+<script>
+	var alert_help = function(){
+	    Swal.fire({
+	      	title: '로그인이 안되시거나<br>비밀번호 재설정이 필요하신 분은<br>DT전략팀에 문의해주세요.',
+	      	confirmButtonText: `확인`
+	    });
+	}
+  
+$(document).ready(function() {
+  $().ready(function() {
+    $sidebar = $('.sidebar');
+    $navbar = $('.navbar');
+    $main_panel = $('.main-panel');
+
+    $full_page = $('.full-page');
+
+    $sidebar_responsive = $('body > .navbar-collapse');
+    sidebar_mini_active = true;
+    white_color = false;
+
+    window_width = $(window).width();
+
+    fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+    $('.fixed-plugin a').click(function(event) {
+      if ($(this).hasClass('switch-trigger')) {
+        if (event.stopPropagation) {
+          event.stopPropagation();
+        } else if (window.event) {
+          window.event.cancelBubble = true;
+        }
+      }
+    });
+
+    $('.fixed-plugin .background-color span').click(function() {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+
+      var new_color = $(this).data('color');
+
+      if ($sidebar.length != 0) {
+        $sidebar.attr('data', new_color);
+      }
+
+      if ($main_panel.length != 0) {
+        $main_panel.attr('data', new_color);
+      }
+
+      if ($full_page.length != 0) {
+        $full_page.attr('filter-color', new_color);
+      }
+
+      if ($sidebar_responsive.length != 0) {
+        $sidebar_responsive.attr('data', new_color);
+      }
+    });
+
+    $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+      var $btn = $(this);
+
+      if (sidebar_mini_active == true) {
+        $('body').removeClass('sidebar-mini');
+        sidebar_mini_active = false;
+        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+      } else {
+        $('body').addClass('sidebar-mini');
+        sidebar_mini_active = true;
+        blackDashboard.showSidebarMessage('Sidebar mini activated...');
+      }
+
+      // we simulate the window Resize so the charts will get updated in realtime.
+      var simulateWindowResize = setInterval(function() {
+        window.dispatchEvent(new Event('resize'));
+      }, 180);
+
+      // we stop the simulation of Window Resize after the animations are completed
+      setTimeout(function() {
+        clearInterval(simulateWindowResize);
+      }, 1000);
+    });
+
+    $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+      var $btn = $(this);
+
+      if (white_color == true) {
+
+        $('body').addClass('change-background');
+        setTimeout(function() {
+          $('body').removeClass('change-background');
+          $('body').removeClass('white-content');
+        }, 900);
+        white_color = false;
+      } else {
+
+        $('body').addClass('change-background');
+        setTimeout(function() {
+          $('body').removeClass('change-background');
+          $('body').addClass('white-content');
+        }, 900);
+
+        white_color = true;
+      }
+
+
+    });
+
+    $('.light-badge').click(function() {
+      $('body').addClass('white-content');
+    });
+
+    $('.dark-badge').click(function() {
+      $('body').removeClass('white-content');
+    });
+  });
+});
+</script>

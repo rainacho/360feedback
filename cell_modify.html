@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>관리자</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    
+    <!-- 관리자페이지 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+
+</head>
+<body class="sidebar-mini ">
+  <div class="wrapper">
+     <!-- Sidebar -->
+     <div class="navbar-minimize-fixed">
+        <button class="minimize-sidebar btn btn-link btn-just-icon">
+          <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+          <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+        </button>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-wrapper">
+          <ul class="gnb">
+            <li class="">
+              <a href="./main_client.html" class="ic_survey">
+              	<span></span>
+                <p>평가하기</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./main_mgmt.html" class="ic_manager">
+              	<span></span>
+                <p>관리자</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+            <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown"><!-- 알림이 있을 경우 active 클래스 추가 -->
+                  <div class="icon_notice"></div> 
+                  <p class="d-lg-none">Notice</p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo"><!-- 사진 등록된 사용자 class active 추가-->
+                  	<span>혜란</span>
+                    <img src="./img/tania.jpg" alt="Table image">
+                  </div>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      
+      <div class="content cell">
+        <!-- Your content here -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header pt-sm">
+                <h3 class="card-title">
+                  실험 등록하기 <!-- 실험 편집하기 -->
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">프로젝트명</label>
+                  <div class="col-sm-10">
+                    <p class="h3 input-auto">프로젝트명</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">실험명</label>
+                  <div class="col-sm-10">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="실험명을 입력해주세요.">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">평가 기간 설정</label>
+                  <div class="col-sm-10">
+                    <div class="form-group w-25 d-inline-block">
+                      <input type="text" class="form-control datetimepicker1" value="2021/11/09">
+                    </div>
+                    &nbsp;&nbsp;-&nbsp;&nbsp;
+                    <div class="form-group w-25 d-inline-block">
+                      <input type="text" class="form-control datetimepicker2" value="2021/11/09">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">PL</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <button class="btn btn-simple" data-toggle="modal" data-target=".formation-modal">
+                          사용자 및 그룹 검색&nbsp;&nbsp;&nbsp;<i class="tim-icons icon-zoom-split"></i>
+                        </button>
+                      </div>
+                      <div class="col-sm-8 badge_area">
+                        <span class="badge_member badge-info text-truncate">김라플 | 조직명이 길어요 <button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">PA</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <button class="btn btn-simple" data-toggle="modal" data-target=".formation-modal">
+                          사용자 및 그룹 검색&nbsp;&nbsp;&nbsp;<i class="tim-icons icon-zoom-split"></i>
+                        </button>
+                      </div>
+                      <div class="col-sm-8 badge_area">
+                        <span class="badge_member badge-info text-truncate">안상현 | DX파트<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate">조혜란 | DX파트<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate">이승현 | DX파트<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate">성은엽 | DX파트<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate">한만호 | PMO팀<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label text-right">지원 담당</label>
+                  <div class="col-sm-10">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <button class="btn btn-simple" data-toggle="modal" data-target=".formation-modal">
+                          사용자 및 그룹 검색&nbsp;&nbsp;&nbsp;<i class="tim-icons icon-zoom-split"></i>
+                        </button>
+                      </div>
+                      <div class="col-sm-8 badge_area">
+                        <span class="badge_member badge-info text-truncate">김정두 | DT전략팀<button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mt-5 pb-50 text-center">
+                  <!-- 실험 등록하기 모드 일때 노출 -->
+                  <button type="submit" class="btn btn-secondary">등록하기</button>
+                  <button class="btn btn-simple">취소</button>
+                  <!-- //실험 등록하기 모드 일때 노출 -->
+                  <!-- 실험 편집하기 모드 일때 노출 -->
+                  <button type="submit" class="btn btn-secondary">저장</button>
+                  <button class="btn btn-simple">삭제</button>
+                  <button class="btn btn-simple">취소</button>
+                  <!-- //실험 편집하기 모드 일때 노출 -->
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 멤버 구성 formation-modal -->
+        <div class="modal fade formation-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+                <h6 class="title title-up">PL 인원 선택</h6><!-- PA 인원 선택, 지원 담당자 선택 해당하는 타이틀 노출 -->
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="form-group position-relative">
+                          <input type="text" class="form-control" placeholder="사용자 및 그룹 검색">
+                          <button class="btn btn-sm position-absolute btn-search">검색</button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="tree-area">
+                          <dl>
+                            <dt class="_active"><span class="btn-tree"></span><span class="group_name">대표이사</span></dt>
+                            <dd class="_active">
+                              <div class="form-check">
+                                <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>이학상 사장</label>
+                              </div>
+                              <dl>
+                                <dt>
+                                  <span class="btn-tree"></span><span class="group_name">준법감시인</span>
+                                </dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김정현 준법감시인</label>
+                                  </div>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">준법감시인지원담당</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>권오범 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">선임계리사</span></dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                  </div>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">선임계리사지원담당</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">위험관리책임자</span></dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                  </div>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">리스크관리팀</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">금융소비자보호총괄책임자</span></dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                  </div>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">소비자보호지원담당</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt>
+                                  <span class="btn-tree"></span><span class="group_name">자산운용파트</span>
+                                </dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                  </div>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">마케팅담당</span></dt>
+                                <dd>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">디지털마케팅팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">브랜드컨텐츠파트</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl>
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">채널마케팅팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">제휴마케팅파트</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl>  
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">CVM센터</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">상품개발팀</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">경영지원실</span></dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                  </div>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">경영지원팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">재경파트</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl> 
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">인사지원파트</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl> 
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">특별계정파트</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl> 
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">계리팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">IFRS_TF</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl> 
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">디지털담당</span></dt>
+                                <dd>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">DT전략팀</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">PMO팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">정보전략파트</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl>  
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">DX파트</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                              <dl>
+                                <dt><span class="btn-tree"></span><span class="group_name">보험서비스담당</span></dt>
+                                <dd>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>임대홍 담당</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>심우송 매니저</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>양혜지 매니저</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>백유라 매니저</label>
+                                  </div>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">보험서비스파트</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김유배 파트장</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>신동준 매니저</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>안세현 매니저</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>변세미 매니저</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>윤영선 매니저</label>
+                                      </div>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>정다솔 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt><span class="btn-tree"></span><span class="group_name">보험심사팀</span></dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                      <dl>
+                                        <dt>
+                                          <span class="btn-tree"></span><span class="group_name">SIU담당</span>
+                                        </dt>
+                                        <dd>
+                                          <div class="form-check">
+                                            <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                          </div>
+                                        </dd>
+                                      </dl>  
+                                    </dd>
+                                  </dl>
+                                  <dl>
+                                    <dt>
+                                      <span class="btn-tree"></span><span class="group_name">고객센터</span>
+                                    </dt>
+                                    <dd>
+                                      <div class="form-check">
+                                        <label class="form-check-label"><input class="form-check-input" type="checkbox"><span class="form-check-sign"></span>김라플 매니저</label>
+                                      </div>
+                                    </dd>
+                                  </dl>
+                                </dd>
+                              </dl>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <span class="badge_member badge-info text-truncate w-90">김라플 | 조직명이 길어요 <button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate w-90">김라플 | 조직명이 길어요 <button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate w-90">김라플 | 조직명이 길어요 <button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                        <span class="badge_member badge-info text-truncate w-90">김라플 | 조직명이 길어요 <button class="btn btn-link"><i class="tim-icons icon-simple-remove"></i></button></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary m-2">저장하기</button>
+                <button type="button" class="btn btn-info btn-simple m-2" data-dismiss="modal">취소</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //멤버 구성 formation-modal -->
+
+      </div><!-- e.content -->
+
+    </div>
+  </div>
+  
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 관리자페이지 공통 스크립트 -->
+<script src="./js/mgmt.js"></script>
+
+</body>
+</html>
+
+<!-- 해당페이지 커스톰 js -->
+<script>
+	var group_action = function(){
+	    $(".tree-area dt").off('click').on('click', function(){
+	      if($(this).next('dd').is('._active')){
+	        $(this).next('dd').removeClass('_active');
+	        $(this).removeClass('_active');
+	      }else{
+	        $(this).next('dd').addClass('_active');
+	        $(this).addClass('_active');
+	      }
+	    });
+	}
+
+
+	$(function () {
+	  	group_action();
+		$('.datetimepicker1').datetimepicker({
+		  format: 'YYYY년 MM월 DD일'
+		});
+		$('.datetimepicker2').datetimepicker({
+		  format: 'YYYY년 MM월 DD일'
+		});
+		$(".datetimepicker1").on("dp.change", function (e) {
+		    $('.datetimepicker2').data("DateTimePicker").minDate(e.date);
+		});
+		$(".datetimepicker2").on("dp.change", function (e) {
+		    $('.datetimepicker1').data("DateTimePicker").maxDate(e.date);
+		}); 
+	});
+
+  var alert_makeout = function(){
+    Swal.fire({
+      title: '작성중인 내용이 있습니다<br>저장하지 않고 페이지를 벗어날 경우<br>작성된 내용이 사라집니다.',
+      showCancelButton: true,
+      confirmButtonText: `확인`,
+      cancelButtonText: `취소`
+    });
+  }
+  var alert_conform = function(){
+    Swal.fire({
+      title: '실험이 정상적으로<br> 등록되었습니다',
+      confirmButtonText: `확인`
+    });
+  }
+  var alert_date = function(){//날짜 오류
+    Swal.fire({
+      title: '오늘 날짜보다 이전날짜는<br>선택할 수 없습니다.',
+      confirmButtonText: `확인`
+    });
+  }
+  var alert_omission = function(){//입력 누락
+    Swal.fire({
+      title: '필수 입력 항목이 누락되었습니다.',
+      confirmButtonText: `확인`
+    });
+  }
+  var alert_delete = function(){
+    Swal.fire({
+      title: '실험을 삭제할까요?<br>삭제된 실험은 복구할 수 없습니다.',
+      showCancelButton: true,
+      confirmButtonText: `확인`,
+      cancelButtonText: `취소`
+    });
+  }
+</script>

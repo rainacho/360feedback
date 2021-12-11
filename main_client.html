@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>사용자 메인</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    
+    <!-- 관리자페이지 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+
+</head>
+<body class="sidebar-mini ">
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="navbar-minimize-fixed">
+      <button class="minimize-sidebar btn btn-link btn-just-icon">
+        <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+        <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+      </button>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper ps">
+          <ul class="gnb">
+            <li class="active">
+              <a href="./main_client.html" class="ic_survey">
+                <span></span>
+                <p>평가하기</p>
+              </a>
+            </li>
+            <li>
+              <a href="./main_mgmt.html" class="ic_manager">
+                <span></span>
+                <p>관리자</p>
+              </a>
+            </li>
+          </ul>
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+    </div>  
+    <!-- End Sidebar -->
+    <div class="main-panel">
+      <!-- Navbar -->
+	  <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+	    <div class="container-fluid">
+	      <div class="navbar-wrapper">
+	        <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+	        <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+	      </div>
+	      <div class="collapse navbar-collapse" id="navigation">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="dropdown nav-item">
+	            <button class="btn btn-sm btn-simple">Log out</button>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <!-- End Navbar -->
+      
+      <div class="content main_client">
+        <!-- Your content here -->
+        <div class="row">
+          <div class="col-9 section-left">
+            <div class="card">
+              <div class="card-header pt-sm">
+                <h3 class="card-title">
+                                    다면평가 리스트 
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="">
+                  <ul class="nav nav-pills nav-pills-primary">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#link1">진행중</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link2">완료</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link3">내 점수조회</em></a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-space">
+                    <!-- 진행중 -->
+                    <div class="tab-pane active" id="link1">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:150px;">
+                          <col style="">
+                          <col style="">
+                          <col style="width:150px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>마감일</th>
+                            <th>프로젝트명</th>
+                            <th>실험단계</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>오늘마감</td>
+                            <td>아이디어 제안사이트</td>
+                            <td>#2</td>
+                            <td>
+                              <button onclick="location.href='./survey.html'" class="btn btn-secondary btn-sm">평가하기</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2021/12/31</td>
+                            <td>보따리서비스</td>
+                            <td>#3</td>
+                            <td>
+                              <button onclick="location.href='./survey.html'" class="btn btn-secondary btn-sm">평가하기</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2021/12/31</td>
+                            <td>노네임프로젝트</td>
+                            <td>#4</td>
+                            <td>
+                              <button onclick="location.href='./survey.html'" class="btn btn-secondary btn-sm">평가하기</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                                                             더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //진행중 -->
+                    <!-- 완료 -->
+                    <div class="tab-pane" id="link2">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:150px;">
+                          <col style="">
+                          <col style="">
+                          <col style="width:150px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>마감일</th>
+                            <th>프로젝트명</th>
+                            <th>실험단계</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2021/10/31</td>
+                            <td>다면평가 시스템</td>
+                            <td>#1</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>2021/10/31</td>
+                            <td>바른디자인서비스</td>
+                            <td>#5</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                                                             더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //완료 -->
+                    <!-- 내 점수 조회 -->
+                    <div class="tab-pane" id="link3">
+                      <table id="celltable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:150px;">
+                          <col style="">
+                          <col style="">
+                          <col style="">
+                          <col style="width:150px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>마감일</th>
+                            <th>프로젝트명</th>
+                            <th>실험단계</th>
+                            <th>다면평가점수</th>
+                            <th>피드백</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>마감</td>
+                            <td>다면평가 시스템</td>
+                            <td>#1</td>
+                            <td class="fc-primary">40</td>
+                            <td>
+                              <button href="javascript:void(0)" data-toggle="modal" data-target=".main-client-feedback" class="btn btn-secondary btn-sm w-100">피드백 확인</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>마감</td>
+                            <td>바른디자인서비스</td>
+                            <td>#5</td>
+                            <td class="fc-primary">42</td>
+                            <td>
+                              <button href="javascript:void(0)" data-toggle="modal" data-target=".main-client-feedback" class="btn btn-sm w-100">다시보기</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- // 내 점수 조회 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 section-right">
+            <!-- s. 프로필 카드 -->
+            <div class="card card-user">
+                <div class="card-body">
+                    <h4 class="card-title row">
+                        <div class="col-9">
+                            <div class="d-inline-block mr-2">김라플 매니저</div>
+                        </div>
+                        <div class="col-3">
+                            <div href="javascript:void(0)" class="right" data-toggle="modal" data-target=".main-client-1">
+                                <i class="tim-icons icon-settings-gear-63"></i>
+                            </div>
+                        </div>
+                    </h4>
+                    <div class="author">
+                        <hr>
+                        <div>
+                            <div>
+	                            <div class="box left">
+	                               <p class="text">전체평가</p>
+                                   <p class="grade">12<span class="unit">건</span></p>
+	                            </div>
+                            </div>
+                            <div>
+                                <div class="box right">
+                                   <p class="text">진행중 평가</p>
+                                   <p class="grade">5<span class="unit">건</span></p>
+                                </div>                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e. 프로필 카드 -->
+            <!-- s.연도별 다면평가 점수  -->
+            <div class="card card-user grade-wrapper text-center">
+	            <div class="card-body m-auto w-100">
+	                <div class="text-left">
+	                    <div class="form-group">
+                          <div class="dropdown">
+                              <button class="btn dropdown-toggle w-100 text-left" type="button" id="dropdown_2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    다면평가 년도
+                              </button>
+                              <div class="dropdown-menu dropdown-black w-100" aria-labelledby="dropdown_2">
+                                  <a class="dropdown-item" href="#">2020년 다면평가</a>
+                                  <a class="dropdown-item" href="#">2021년 다면평가</a>
+                              </div>
+                          </div>
+                        </div>
+	                </div>
+	                <div class="author">
+	                    <hr>
+	                    <div class="box">
+		                    <p class="text">다면평가 점수</p>
+	                        <p class="grade">32<span class="unit">점</span></p>
+	                    </div>   
+	                </div>
+	            </div>
+            </div>
+            <!-- e.연도별 다면평가 점수  -->
+          </div>
+        </div>
+        <!-- s. 프로필수정  modal data-target::main-client-1 -->
+        <div class="modal fade main-client-1" tabindex="-1" role="dialog" aria-labelledby="" aria-modal="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="tim-icons icon-simple-remove"></i>
+                      </button>
+                      <h6 class="title title-up">비밀번호 변경</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="form-group">
+	                            <div class="input-group">
+	                              <div class="input-group-prepend">
+	                                  <div class="input-group-text">
+	                                    <i class="tim-icons icon-lock-circle"></i>
+	                                  </div>
+	                              </div>
+	                              <input type="text" class="form-control" placeholder="현재 비밀번호">
+	                            </div>
+                            </div>
+                            <div class="form-group">
+			                    <div class="input-group">
+			                      <div class="input-group-prepend">
+	                                  <div class="input-group-text">
+	                                    <i class="tim-icons icon-lock-circle"></i>
+	                                  </div>
+	                              </div>
+	                              <input type="text" class="form-control" placeholder="새 비밀번호 (4자이상)">
+	                            </div>
+	                        </div>
+	                        <div class="form-group">    
+	                            <div class="input-group">
+	                              <div class="input-group-prepend">
+	                                  <div class="input-group-text">
+	                                    <i class="tim-icons icon-lock-circle"></i>
+	                                  </div>
+	                              </div>
+	                              <input type="text" class="form-control" placeholder="새 비밀번호 확인">
+	                            </div>
+	                        </div>    
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary m-2" onclick="alert_help();" data-dismiss="modal">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e. 프로필수정  modal -->
+        
+        <!-- s. 피드백확인  modal data-target::main-client-feedback -->
+        <div class="modal fade main-client-feedback" tabindex="-1" role="dialog" aria-labelledby="" aria-modal="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="tim-icons icon-simple-remove"></i>
+                      </button>
+                      <h6 class="title title-up">다면평가 시스템/#1 평가 피드백</h6>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="feed-box">
+                                                                짧은 일정에도 완성도를 올리기 위해 노력하는 모습이 탁월했습니다!
+				                            제가 모르는 분야도 친절하게 잘 가르쳐주셔서 이번 프로젝트에서 많이 배웠습니다.
+				                            다음에도 함께 프로젝트를 할 수 있었으면 좋겠습니다.
+				                            고생많으셨습니다.                                    
+                            </div>
+                            <div class="feed-box">
+                                                                짧은 일정에도 완성도를 올리기 위해 노력하는 모습이 탁월했습니다!
+		                                              제가 모르는 분야도 친절하게 잘 가르쳐주셔서 이번 프로젝트에서 많이 배웠습니다.
+		                                              다음에도 함께 프로젝트를 할 수 있었으면 좋겠습니다.
+		                                              고생많으셨습니다.                                    
+                            </div>
+                            <div class="feed-box">
+                                                                짧은 일정에도 완성도를 올리기 위해 노력하는 모습이 탁월했습니다!
+		                                              제가 모르는 분야도 친절하게 잘 가르쳐주셔서 이번 프로젝트에서 많이 배웠습니다.
+		                                              다음에도 함께 프로젝트를 할 수 있었으면 좋겠습니다.
+		                                              고생많으셨습니다.                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-secondary m-2" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e. 프로필수정  modal -->
+      </div><!-- e. content -->
+      
+  
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div><!-- e .main-panel -->
+</div><!-- e .wrapper -->
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 관리자페이지 공통 스크립트 -->
+<script src="./js/client.js"></script>
+
+</body>
+</html>
+
+<!-- 해당페이지 커스톰 js -->
+<script>
+$(document).ready(function(){
+	$(window).resize();
+});
+
+
+var responseHeight = function(){
+    var rightH =$('.section-right > .card').eq(0).height() + $('.section-right > .card').eq(1).height() + 30;
+    var leftH = $('.section-left > .card').css('min-height', rightH);
+}
+
+var alert_help = function(){
+    Swal.fire({
+        title: '저장되었습니다.',
+        confirmButtonText: `확인`
+    });
+}
+
+// 윈도우 리사이징시 좌, 우 섹션 높이조정
+$(window).resize(function(){
+    responseHeight();
+});
+
+</script>

@@ -1,0 +1,457 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>관리자</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    <!-- 관리자페이지 공통 CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+</head>
+<body class="sidebar-mini ">
+  <div class="wrapper">
+     <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sidebar-wrapper">
+          <ul class="gnb">
+            <li class="">
+              <a href="./main_client.html" class="ic_survey">
+              	<span></span>
+                <p>평가하기</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./main_mgmt.html" class="ic_manager">
+              	<span></span>
+                <p>관리자</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+            <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <button class="btn btn-sm btn-simple">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      
+      <div class="content">
+        <!-- Your content here -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                <span>관리자 페이지 &gt;</span>평가 등록
+                  <button class="btn btn-primary float-right" data-toggle="modal" data-target=".registration-modal">
+                    	프로젝트 등록하기 <i class="tim-icons icon-simple-add"></i>
+                  </button>
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="">
+                  <ul class="nav nav-pills nav-pills-primary">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#link1">
+                        전체보기<em>(3)</em>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link2">
+                        진행중인 프로젝트<em>(1)</em>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link3">
+                        완료된 프로젝트<em>(2)</em>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-space">
+                    <!-- 전체보기 -->
+                    <div class="tab-pane active" id="link1">
+                      <table id="datatable" class="table table-striped">
+                        <colgroup>
+                          <col style="width:100px">
+                          <col style="width:auto">
+                          <col style="width:100px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>진행 상태</th>
+                            <th>프로젝트명</th>
+                            <th>등록일</th>
+                            <th>프로젝트 유형</th>
+                            <th>등록된 실험</th>
+                            <th>프로젝트 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>진행중</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">작성중 이탈(alert_makeout), 등록완료(alert_conform), 변경사항 저장 완료(alert_modify), 삭제(alert_delete)</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>인프라</td>
+                            <td>4/5</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>완료</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">프로젝트명이 노출 되는 영역입니다. 프로젝트 명이 글자 수가 많을 경우 어떻게 표현될까요? 글자수 테스트를 위해 길게 작성합니다.</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>서비스</td>
+                            <td>4/4</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>완료</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">완료된 프로젝트 입니다. 프로젝트명이 노출 되는 영역입니다.</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>기타</td>
+                            <td>3/3</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //전체보기 -->
+                    <!-- 진행중인 프로젝트 -->
+                    <div class="tab-pane" id="link2">
+                      <table id="datatable-ing" class="table table-striped">
+                        <colgroup>
+                          <col style="width:100px">
+                          <col style="width:auto">
+                          <col style="width:100px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>진행 상태</th>
+                            <th>프로젝트명</th>
+                            <th>등록일</th>
+                            <th>프로젝트 유형</th>
+                            <th>등록된 실험</th>
+                            <th>프로젝트 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>진행중</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">프로젝트명이 노출 되는 영역입니다.</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>인프라</td>
+                            <td>4/5</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //진행중인 프로젝트 -->
+                    <!-- 완료된 프로젝트 -->
+                    <div class="tab-pane" id="link3">
+                      <table id="datatable-end" class="table table-striped">
+                        <colgroup>
+                          <col style="width:100px">
+                          <col style="width:auto">
+                          <col style="width:100px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                          <col style="width:120px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>진행 상태</th>
+                            <th>프로젝트명</th>
+                            <th>등록일</th>
+                            <th>프로젝트 유형</th>
+                            <th>등록된 실험</th>
+                            <th>프로젝트 관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>완료</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">프로젝트명이 노출 되는 영역입니다. 프로젝트 명이 글자 수가 많을 경우 어떻게 표현될까요? 글자수 테스트를 위해 길게 작성합니다.</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>서비스</td>
+                            <td>4/4</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>완료</td>
+                            <td class="pj_title"><a href="#" class="d-inline-block">완료된 프로젝트 입니다. 프로젝트명이 노출 되는 영역입니다.</a></td>
+                            <td>YY.MM.DD</td>
+                            <td>기타</td>
+                            <td>3/3</td>
+                            <td>
+                              <button class="btn btn-sm">편집</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row mt-5">
+                        <button class="btn btn-info btn-simple m-auto"><!-- 5개 이상일 경우 노출-->
+                          더보기
+                        </button>
+                      </div>
+                    </div>
+                    <!-- //완료된 프로젝트 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 프로젝트 등록/편집 registration-modal -->
+        <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+                <h6 class="title title-up">프로젝트 등록</h6><!-- 편집 시 '프로젝트 편집' 노출 -->
+              </div>
+              <div class="modal-body">
+                <div class="col-md-12">
+                  <div class="card bg-transparent shadow-none">
+                    <div class="card-body">
+                      <form method="get" action="/" class="form-horizontal">
+                        <div class="row">
+                          <label class="col-sm-2 col-form-label">유형</label>
+                          <div class="col-sm-10 checkbox-radios">
+                            <div class="form-check form-check-radio form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <span class="form-check-sign"></span>
+                                서비스
+                              </label>
+                            </div>
+                            <div class="form-check form-check-radio form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <span class="form-check-sign"></span>
+                                상품
+                              </label>
+                            </div>
+                            <div class="form-check form-check-radio form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <span class="form-check-sign"></span>
+                                개선
+                              </label>
+                            </div>
+                            <div class="form-check form-check-radio form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <span class="form-check-sign"></span>
+                                인프라
+                              </label>
+                            </div>
+                            <div class="form-check form-check-radio form-check-inline">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <span class="form-check-sign"></span>
+                                기타
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <label class="col-sm-2 col-form-label">프로젝트명</label>
+                          <div class="col-sm-10">
+                            <div class="form-group">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row"><!-- 등록 시 노출하지 않음 / 편집 시 노출 -->
+                          <label class="col-sm-2 col-form-label">진행 상태</label>
+                          <div class="col-sm-10">
+                          	<div class="dropdown">
+                           		<button class="btn dropdown-toggle" type="button" id="dropdown_11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           			선택
+                           		</button>
+                           		<div class="dropdown-menu dropdown-black" aria-labelledby="dropdown_11">
+                           			<a class="dropdown-item" href="#">진행중</a>
+                           			<a class="dropdown-item" href="#">완료</a>
+                           		</div>
+                           	</div>
+                          </div>
+                        </div>  
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <!-- 프로젝트 등록하기 모드 일때 노출 -->
+                <button type="button" class="btn btn-secondary m-2">등록하기</button>
+                <button type="button" class="btn btn-info btn-simple m-2" data-dismiss="modal">취소</button>
+                <!-- //프로젝트 등록하기 모드 일때 노출 -->
+                <!-- 프로젝트 편집하기 모드 일때 노출 -->
+                <button type="button" class="btn btn-secondary m-2">저장</button>
+                <button type="button" class="btn btn-danger m-2" data-dismiss="modal">삭제</button>
+                <button type="button" class="btn btn-info btn-simple m-2" data-dismiss="modal">취소</button>
+                <!-- //프로젝트 편집하기 모드 일때 노출 -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- e. content -->
+
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div> <!-- e .main-panel -->
+</div> <!-- e .wrapper -->
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 관리자페이지 공통 스크립트 -->
+<script src="./js/mgmt.js"></script>
+
+</body>
+</html>
+
+<script>
+  $(function() {
+    var table = $('#datatable').DataTable();
+    var table_ing = $('#datatable-ing').DataTable();
+    var table_end = $('#datatable-end').DataTable();
+    
+   
+  });
+
+  var alert_makeout = function(){
+    Swal.fire({
+      title: '작성중인 내용이 있습니다<br>저장하지 않고 페이지를 벗어날 경우<br>작성된 내용이 사라집니다.',
+      showCancelButton: true,
+      confirmButtonText: `확인`,
+      cancelButtonText: `취소`
+    });
+  }
+
+  var alert_conform = function(){
+    Swal.fire({
+      title: '프로젝트가 정상적으로<br> 등록되었습니다',
+      confirmButtonText: `확인`
+    });
+  }
+
+  var alert_modify = function(){
+    Swal.fire({
+      title: '변경사항이 저장되었습니다.',
+      confirmButtonText: `확인`
+    });
+  }
+
+  var alert_delete = function(){
+    Swal.fire({
+      title: '프로젝트를 삭제할까요?<br>삭제된 프로젝트는 복구할 수 없습니다.',
+      showCancelButton: true,
+      confirmButtonText: `확인`,
+      cancelButtonText: `취소`
+    });
+  }
+  
+</script>

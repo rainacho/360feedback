@@ -1,0 +1,76 @@
+.card.type02 {
+	background: #1e1f2b;
+}
+.divid.type01 {
+	margin: 5px 0 40px;
+	border-top: 1px solid #787878;
+}
+.draggable {
+	cursor: move;
+	transition: opacity 0.2s;
+	height: 40px !important;
+	width: 40px !important;
+	border-radius: 50%;
+	margin: 0 5px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #00bf9a;
+}
+.draggable.photo img {
+	border-radius: 50%;
+}
+.droppable {
+	height: 428px;
+	padding: 10px 0;
+	background-color: #1e1f2b;
+	border-radius: 0.2857rem;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.droppable .draggable {
+	margin: 10px 0;
+}
+.droppable span {
+	position: relative;
+	top: 10px;
+}
+.droppable.droppable-hover {
+	border: 2px dashed #00bf9a;
+	transform: scale(1.1);
+	transition: transform 0.3s ease-in-out;
+}
+.cir-grade {
+	height: 40px !important;
+	width: 40px !important;
+	border-radius: 50%;
+	margin: 0 5px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 10px 0 20px;
+	background: #1d8cf8;
+}
+.droppable .cir-grade {
+	margin: 10px 0 30px;
+}
+
+.name-box-indicator {
+	background-color: #181d22;
+	transition: all 0.3s ease-in-out;
+}
+.member-list-wrap .table tr {
+	height: 65px;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

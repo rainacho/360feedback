@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- s 상단공통 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <title>관리자</title>
+    <!-- Fonts and icons -->
+    <link href="./css/fontawesome.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./css/black-dashboard.css?v=1.1.1" rel="stylesheet" />
+    <!-- e 상단공통 -->
+    <!-- 관리자페이지 공통 CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/mgmt.css">
+
+</head>
+<body class="sidebar-mini ">
+  <div class="wrapper">
+     <!-- Sidebar -->
+     <div class="navbar-minimize-fixed">
+        <button class="minimize-sidebar btn btn-link btn-just-icon">
+          <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+          <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+        </button>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-wrapper">
+          <ul class="gnb">
+            <li class="">
+              <a href="./main_client.html" class="ic_survey">
+              	<span></span>
+                <p>평가하기</p>
+              </a>
+            </li>
+            <li class="active">
+              <a href="./main_mgmt.html" class="ic_manager">
+              	<span></span>
+                <p>관리자</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="logo"><img src="./img/bi.png" alt="lifeplanet" /></div>
+            <a class="navbar-brand" href="javascript:void(0)">다면평가 시스템</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown"><!-- 알림이 있을 경우 active 클래스 추가 -->
+                  <div class="icon_notice"></div> 
+                  <p class="d-lg-none">Notice</p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo"><!-- 사진 등록된 사용자 class active 추가-->
+                  	<span>혜란</span>
+                    <img src="./img/tania.jpg" alt="Table image">
+                  </div>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link">
+                    <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      
+      <div class="content">
+        <!-- Your content here -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header pt-sm">
+                <h3 class="card-title">평가서 관리</h3>
+              </div>
+              <div class="card-body">
+                <div class="">
+                  <ul class="nav nav-pills nav-pills-primary">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-toggle="tab" href="#link1">팀원간 평가서</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link2">
+                        PL평가서 (팀원 작성)
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link3">
+                        PL평가서 (지원담당 작성)
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="tab" href="#link4">
+                        지원담당 평가서 (PL 작성)
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab-content tab-space">
+                    <!-- 팀원간 평가서 -->
+                    <div class="tab-pane active" id="link1">
+                      <!--평가서 등록 및 편집-->
+                      <ul id="list1" class="article_list droppable__js">
+                        <li class="draggable__js" draggable="true" id="card1">
+                          <div class="box">
+                            <div class="box-body">
+                              <div class="row">
+                                <div class="col-sm-8">
+	                                <div class="form-group">
+	                                  <input type="text" class="form-control" placeholder="질문 타이틀 입력(필수)">
+	                                </div>
+	                                <div class="form-group">
+	                                  <textarea class="form-control" rows="3" placeholder="질문 상세내용 입력(선택)"></textarea>
+	                                </div>
+	                                <!-- 점수제 선택 시 -->
+	                                <div class="point_a mt-5">
+	                                  <div class="form-group d-inline-block">
+	                                    <div class="dropdown">
+		                              		<button class="btn dropdown-toggle" type="button" id="min_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                              			Min
+		                              		</button>
+		                              		<div class="dropdown-menu dropdown-black dropdown-menu__js" aria-labelledby="min_1">
+		                              			<a class="dropdown-item" href="#">1점</a>
+		                              			<a class="dropdown-item" href="#">2점</a>
+		                              			<a class="dropdown-item" href="#">3점</a>
+		                              			<a class="dropdown-item" href="#">4점</a>
+		                              			<a class="dropdown-item" href="#">5점</a>
+		                              			<a class="dropdown-item" href="#">6점</a>
+		                              			<a class="dropdown-item" href="#">7점</a>
+		                              			<a class="dropdown-item" href="#">8점</a>
+		                              			<a class="dropdown-item" href="#">9점</a>
+		                              			<a class="dropdown-item" href="#">10점</a>
+		                              		</div>
+	                              	    </div>
+	                                  </div>
+	                                  <div class="form-group d-inline-block">
+	                                    <input type="text" class="form-control" placeholder="매우 미숙 하였음">
+	                                  </div>
+	                                  &nbsp;&nbsp;~&nbsp;&nbsp;
+	                                  <div class="form-group d-inline-block">
+	                                    <div class="dropdown">
+		                              		<button class="btn dropdown-toggle" type="button" id="max_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                              			Max
+		                              		</button>
+		                              		<div class="dropdown-menu dropdown-black dropdown-menu__js" aria-labelledby="max_1">
+		                              			<a class="dropdown-item" href="#">1점</a>
+		                              			<a class="dropdown-item" href="#">2점</a>
+		                              			<a class="dropdown-item" href="#">3점</a>
+		                              			<a class="dropdown-item" href="#">4점</a>
+		                              			<a class="dropdown-item" href="#">5점</a>
+		                              			<a class="dropdown-item" href="#">6점</a>
+		                              			<a class="dropdown-item" href="#">7점</a>
+		                              			<a class="dropdown-item" href="#">8점</a>
+		                              			<a class="dropdown-item" href="#">9점</a>
+		                              			<a class="dropdown-item" href="#">10점</a>
+		                              		</div>
+	                              	    </div>
+	                                  </div>
+	                                  <div class="form-group d-inline-block">
+	                                    <input type="text" class="form-control" placeholder="매우 탁월 하였음">
+	                                  </div>
+	                                </div>
+	                                <!-- //점수제 선택 시 -->
+                                </div>
+                                <div class="col-sm-2">
+                                  <div class="form-group">
+                                  	<div class="dropdown">
+                                  		<button class="btn dropdown-toggle" type="button" id="dropdown_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  			답변지 선택
+                                  		</button>
+                                  		<div class="dropdown-menu dropdown-black" aria-labelledby="dropdown_1">
+                                  			<a class="dropdown-item" href="#">점수제</a>
+                                  			<a class="dropdown-item" href="#">주관식</a>
+                                  			<a class="dropdown-item" href="#">객관식</a>
+                                  		</div>
+                                  	</div>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" checked="checked" value="">
+                                        필수 질문    
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                  <button class="btn btn-secondary btn-sm btn-simple">저장</button>
+                                  <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- 점수제 저장 시 -->
+                        <li class="draggable__js" draggable="true" id="card2">
+                          <div class="box">
+                            <div class="box">
+                              <div class="box-body">
+                                <div class="row">
+                                  <div class="col-sm-8">
+	                                  <h4>질문 타이틀이 보여지는 영역입니다.</h4>
+	                                  <h5>질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다.</h5>
+	                                  <div class="point_a mt-5">
+	                                    <span class="badge badge-pill badge-default">매우 미숙 하였음</span>
+	                                    <span class="badge badge-pill badge-info">1점</span>
+	                                     ~ 
+	                                    <span class="badge badge-pill badge-info">10점</span>
+	                                    <span class="badge badge-pill badge-default">매우 탁월 하였음</span>
+	                                  </div>
+                                  </div>
+                                  <div class="col-sm-2">
+                                    점수제 / 필수
+                                  </div>
+                                  <div class="col-sm-2 text-right">
+                                    <button class="btn btn-secondary btn-sm btn-simple">편집</button>
+                                    <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <!-- //점수제 저장 시 -->
+                        <li class="draggable__js" draggable="true" id="card3">
+                          <div class="box">
+                            <div class="box-body">
+                              <div class="row">
+                                <div class="col-sm-8">
+	                                <div class="form-group">
+	                                  <input type="text" class="form-control" placeholder="질문 타이틀 입력(필수)">
+	                                </div>
+	                                <div class="form-group">
+	                                  <textarea class="form-control" rows="3" placeholder="질문 상세내용 입력(선택)"></textarea>
+	                                </div>
+	                                <!-- 객관식 선택 시 -->
+	                                <div class="objective_a mt-5">
+	                                  <div class="form-group">
+	                                    <input type="text" class="form-control" placeholder="내용 입력">
+	                                  </div>
+	                                  <div class="form-group">
+	                                    <input type="text" class="form-control" placeholder="내용 입력">
+	                                  </div>
+	                                  <button class="btn btn-sm btn-info btn-simple">
+	                                    <i class="tim-icons icon-simple-add"></i> 추가
+	                                  </button>
+	                                </div>
+	                                <!-- //객관식 선택 시 -->
+                                </div>
+                                <div class="col-sm-2">
+                                  <div class="form-group">
+                                    <div class="dropdown">
+                                  		<button class="btn dropdown-toggle" type="button" id="dropdown_2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  			답변지 선택
+                                  		</button>
+                                  		<div class="dropdown-menu dropdown-black" aria-labelledby="dropdown_2">
+                                  			<a class="dropdown-item" href="#">점수제</a>
+                                  			<a class="dropdown-item" href="#">주관식</a>
+                                  			<a class="dropdown-item" href="#">객관식</a>
+                                  		</div>
+                                  	</div>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" checked="checked" value="">
+                                        필수 질문    
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                  <button class="btn btn-secondary btn-sm btn-simple">저장</button>
+                                  <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="draggable__js" draggable="true" id="card4">
+                          <div class="box">
+                            <div class="box-body">
+                              <div class="row">
+                                <div class="col-sm-8">
+	                                <h4>질문 타이틀이 보여지는 영역입니다.</h4>
+	                                <h5>질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다.</h5>
+	                                <div class="objective_a mt-5">
+	                                  <ol>
+	                                    <li>의견 공유를 잘함</li>
+	                                    <li>의견 공유를 잘하는 편인 것 같음</li>
+	                                    <li>의견 공유를 잘하는 편이나 합리적이지 못함</li>
+	                                  </ol>
+	                                </div>
+                                </div>
+                                <div class="col-sm-2">
+                                  객관식 / 필수
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                  <button class="btn btn-secondary btn-sm btn-simple">편집</button>
+                                  <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="draggable__js" draggable="true" id="card5">
+                          <div class="box">
+                            <div class="box-body">
+                              <div class="row">
+                                <div class="col-sm-8">
+	                                <div class="form-group">
+	                                  <input type="text" class="form-control" placeholder="질문 타이틀 입력(필수)">
+	                                </div>
+	                                <div class="form-group">
+	                                  <textarea class="form-control" rows="3" placeholder="질문 상세내용 입력(선택)"></textarea>
+	                                </div>
+	                                <!-- 주관식 선택 시 -->
+	                                <div class="subjective_a mt-5">
+	                                  <div class="form-group">
+	                                    <textarea class="form-control" rows="3" placeholder="주관식 답변"></textarea>
+	                                  </div>
+	                                </div>
+	                                <!-- //주관식 선택 시 -->
+                                </div>
+                                <div class="col-sm-2">
+                                  <div class="form-group">
+                                   <div class="dropdown">
+                                  		<button class="btn dropdown-toggle" type="button" id="dropdown_3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  			답변지 선택
+                                  		</button>
+                                  		<div class="dropdown-menu dropdown-black" aria-labelledby="dropdown_3">
+                                  			<a class="dropdown-item" href="#">점수제</a>
+                                  			<a class="dropdown-item" href="#">주관식</a>
+                                  			<a class="dropdown-item" href="#">객관식</a>
+                                  		</div>
+                                  	</div>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="">
+                                        필수 질문    
+                                        <span class="form-check-sign">
+                                            <span class="check"></span>
+                                        </span>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                  <button class="btn btn-secondary btn-sm btn-simple">저장</button>
+                                  <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="draggable__js" draggable="true" id="card6">
+                          <div class="box">
+                            <div class="box-body">
+                              <div class="row">
+                                <div class="col-sm-8">
+	                                <h4>질문 타이틀이 보여지는 영역입니다.</h4>
+	                                <h5>질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다. 질문 상세내용이 보여 지는 영역입니다.</h5>
+	                                <div class="subjective_a mt-5">
+	                                  <div class="form-group">
+	                                    <textarea class="form-control" rows="3" placeholder="주관식 답변"></textarea>
+	                                  </div>
+	                                </div>
+                                </div>
+                                <div class="col-sm-2">
+                                  주관식 / 선택
+                                </div>
+                                <div class="col-sm-2 text-right">
+                                  <button class="btn btn-secondary btn-sm btn-simple">편집</button>
+                                  <button class="btn btn-secondary btn-sm btn-simple">삭제</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="text-right">
+	                      <button class="btn">
+	                      	질무지 추가 <i class="tim-icons icon-simple-add"></i>
+	                      </button>
+                      </div>
+                      <div class="mt-5 text-center">
+                        <button class="btn btn-secondary">저장하기</button>
+                        <button class="btn btn-simple">취소</button>
+                      </div>
+                      <!--//평가서 등록 및 편집-->
+                    </div>
+                    <!-- //팀원간 평가서 -->
+                    <!-- PL평가서(팀원 작성) -->
+                    <div class="tab-pane" id="link2">
+                      <!--'팀원간 평가서' 내 '평가서 등록 및 편집'과 같음-->
+                    </div>
+                    <!-- //PL평가서(팀원 작성) -->
+                    <!-- PL평가서(지원담당 작성) -->
+                    <div class="tab-pane" id="link3">
+                      <!--'팀원간 평가서' 내 '평가서 등록 및 편집'과 같음-->
+                    </div>
+                    <!-- //PL평가서(지원담당 작성) -->
+                    <!-- 지원담당 평가서(PL작성) -->
+                    <div class="tab-pane" id="link4">
+                      <!--'팀원간 평가서' 내 '평가서 등록 및 편집'과 같음-->
+                    </div>
+                    <!-- //지원담당 평가서(PL작성) -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- e. content -->
+
+<!-- s 하단공통  -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="copyright">
+        COPYRIGHT © KYOBO LIFEPLANET LIFE INSURANCE COMPANY ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+</div><!-- e .main-panel -->
+</div><!-- e .wrapper -->
+<!--   Core JS Files   -->
+<script src="./js/core/jquery.min.js"></script>
+<script src="./js/core/popper.min.js"></script>
+<script src="./js/core/bootstrap.min.js"></script>
+<script src="./js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="./js/plugins/moment.min.js"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="./js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for Sweet Alert -->
+<script src="./js/plugins/sweetalert2.min.js"></script>
+<!--  Plugin for Sorting Tables -->
+<script src="./js/plugins/jquery.tablesorter.js"></script>
+<!-- Forms Validations Plugin -->
+<script src="./js/plugins/jquery.validate.min.js"></script>
+<!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+<script src="./js/plugins/jquery.bootstrap-wizard.js"></script>
+<!--    Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="./js/plugins/bootstrap-selectpicker.js"></script>
+<!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+<script src="./js/plugins/bootstrap-datetimepicker.js"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="./js/plugins/jquery.dataTables.min.js"></script>
+<!--    Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="./js/plugins/bootstrap-tagsinput.js"></script>
+<!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="./js/plugins/jasny-bootstrap.min.js"></script>
+<!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+<script src="./js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="./js/plugins/fullcalendar/daygrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/timegrid.min.js"></script>
+<script src="./js/plugins/fullcalendar/interaction.min.js"></script>
+<!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+<script src="./js/plugins/jquery-jvectormap.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./js/plugins/nouislider.min.js"></script>
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+<!-- Chart JS -->
+<script src="./js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="./js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="./js/black-dashboard.min.js?v=1.1.1"></script>
+<!-- e 하단공통  -->
+
+<!-- 관리자페이지 공통 스크립트 -->
+<script src="./js/mgmt.js"></script>
+
+</body>
+</html>
+
+<!-- 해당페이지 커스톰 js -->
+<script>
+	var alert_title = function(){
+	    Swal.fire({
+	      title: '질문 타이틀을 입력해주세요.',
+	      confirmButtonText: `확인`
+	    });
+	  }
+	  var alert_answer = function(){
+	    Swal.fire({
+	      title: '답변지 선택해주세요.',
+	      confirmButtonText: `확인`
+	    });
+	  }
+	  var alert_conform = function(){
+	    Swal.fire({
+	      title: '작성된 질문만 등록됩니다.',
+	      showCancelButton: true,
+	      confirmButtonText: `확인`,
+	      cancelButtonText: `취소`
+	    });
+	  }
+	  var alert_objective = function(){
+	    Swal.fire({
+	      title: '객관식 답안은 2개 이상 필요합니다.',
+	      confirmButtonText: `확인`
+	    });
+	  }
+	  var alert_delete = function(){
+	    Swal.fire({
+	      title: '해당 질문을 삭제하시겠습니까?<br>삭제 된 질문은 복구가 불가합니다.',
+	      showCancelButton: true,
+	      confirmButtonText: `삭제`,
+	      cancelButtonText: `취소`
+	    });
+	  }
+</script>
+<script>
+
+//드래그엔드롭  UI
+    var draggableElements = document.querySelectorAll('.draggable__js');
+    var droppableElements = document.querySelectorAll('.droppable__js');
+    
+    
+   	draggableElements.forEach(function(elem) {
+         elem.addEventListener('dragstart', dragStart);
+         elem.addEventListener('dragend', dragEnd);
+    });
+  
+   	droppableElements.forEach(function(elem) {
+   		elem.addEventListener('dragenter', dragEnter);
+   		elem.addEventListener('dragover', dragOver);
+   		elem.addEventListener('dragleave', dragLeave);
+        elem.addEventListener('drop', drop);
+    });
+    
+    //Drag and Drop Function
+    
+    function dragStart(event) {
+    	console.log('id::' + event.target.id);
+        event.dataTransfer.setData("card", event.target.id);
+        document.getElementById(event.target.id).style.border = '2px dashed #00bf9a';
+        document.querySelectorAll('.dropdown-menu__js').forEach(function(elem){
+        	elem.style.display = 'none';	
+        });
+    }
+    
+    function dragEnd(event) {
+    	console.log('drag end!!!');
+        document.getElementById(event.target.id).style.border = 'none';
+        document.querySelectorAll('.dropdown-menu__js').forEach(function(elem){
+        	elem.style.display = 'block'; 
+        });
+    }
+    
+    function dragEnter(event) {}
+    
+    function dragLeave(event) {
+    	console.log('drag leave!!!');
+    }
+    
+    function dragOver(event) {
+         event.preventDefault();
+         var holderId = event.target.closest('.draggable__js').id;
+         
+         var holderIdEl = document.getElementById(holderId);
+         //console.log('holderId:::', holderId);
+    }
+    
+    function drop(event) {
+    	event.preventDefault();
+        var sourceId = event.dataTransfer.getData("card");
+        var sourceIdEl = document.getElementById(sourceId);
+        var sourceIdElText = sourceIdEl.innerHTML;
+        
+        var holderId = event.target.closest('.draggable__js').id;
+        var holderIdEl = document.getElementById(holderId);
+        var holderIdElText = holderIdEl.innerHTML;
+        
+        
+        sourceIdEl.innerHTML = holderIdElText;
+        holderIdEl.innerHTML = sourceIdElText;
+        
+        sourceIdEl.style.border = 'none';
+    }
+
+
+</script>
